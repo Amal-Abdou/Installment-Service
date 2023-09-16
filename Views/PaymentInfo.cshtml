@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.Installment.Models.PaymentInfoModel
+
+<div class="title">
+    <strong>@T("Payment.SelectInstallmentPaymentType")</strong>
+</div>
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            <label style="margin:0 12px;">
+                <input type="radio" name="InstallmentPaymentType" value="valu">
+                <img src="../Plugins/Payments.InstallmentService/valu.png" style="width: 60px;height: 30px;" />
+            </label>
+            <label style="margin:0 12px;">
+                <input type="radio" name="InstallmentPaymentType" value="aman" >
+                <img src="../Plugins/Payments.InstallmentService/aman.png" style="width: 60px;height: 30px;" />
+            </label>
+            <label style="margin:0 12px;">
+                <input type="radio" name="InstallmentPaymentType" value="bank">
+                <img src="../Plugins/Payments.InstallmentService/bank.png" style="width: 180px;height: 30px;" />
+            </label>
+            <label style="margin:0 12px;">
+                <input type="radio" name="InstallmentPaymentType" value="sympl">
+                <img src="../Plugins/Payments.InstallmentService/sympl.png" style="width: 60px;height: 30px;" />
+            </label>
+            <label style="margin:0 12px;">
+                <input type="radio" name="InstallmentPaymentType" value="soohoula">
+                <img src="../Plugins/Payments.InstallmentService/souhoola.png" style="width: 60px;height: 30px;" />
+            </label>
+          @*  Valu <input asp-for="InstallmentPaymentType" type="radio" name="InstallmentPaymentType" value="valu" />
+            Aman <input asp-for="InstallmentPaymentType" type="radio" name="InstallmentPaymentType" value="aman" />
+            Bank <input asp-for="InstallmentPaymentType" type="radio" name="InstallmentPaymentType" value="bank" />
+            Sympol <input asp-for="InstallmentPaymentType" type="radio" name="InstallmentPaymentType" value="sympl" />
+            Soohoula <input asp-for="InstallmentPaymentType" type="radio" name="InstallmentPaymentType" value="soohoula" />
+       *@
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,143 @@
+﻿@model Nop.Plugin.Payments.Installment.Models.ConfigurationModel
+@inject Nop.Core.IWebHelper webHelper
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+
+<form asp-controller="PaymentInstallment" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @Html.Raw(T("Plugins.Payments.Installment.Instructions", $"{webHelper.GetStoreLocation()}Plugins/PaymentInstallment/PDTHandler"))
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="UseSandbox_OverrideForStore" asp-input="UseSandbox" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="UseSandbox" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UseSandbox" />
+                        <span asp-validation-for="UseSandbox"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="ApiKey_OverrideForStore" asp-input="ApiKey" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="ApiKey" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ApiKey" />
+                        <span asp-validation-for="ApiKey"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="ValuFrameId_OverrideForStore" asp-input="ValuFrameId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="ValuFrameId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ValuFrameId" />
+                        <span asp-validation-for="ValuFrameId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="ValuIntegrationId_OverrideForStore" asp-input="ValuIntegrationId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="ValuIntegrationId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ValuIntegrationId" />
+                        <span asp-validation-for="ValuIntegrationId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SoohoulaFrameId_OverrideForStore" asp-input="SoohoulaFrameId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SoohoulaFrameId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SoohoulaFrameId" />
+                        <span asp-validation-for="SoohoulaFrameId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SoohoulaIntegrationId_OverrideForStore" asp-input="SoohoulaIntegrationId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SoohoulaIntegrationId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SoohoulaIntegrationId" />
+                        <span asp-validation-for="SoohoulaIntegrationId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="AmanFrameId_OverrideForStore" asp-input="AmanFrameId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="AmanFrameId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AmanFrameId" />
+                        <span asp-validation-for="AmanFrameId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="AmanIntegrationId_OverrideForStore" asp-input="AmanIntegrationId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="AmanIntegrationId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AmanIntegrationId" />
+                        <span asp-validation-for="AmanIntegrationId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SymplFrameId_OverrideForStore" asp-input="SymplFrameId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SymplFrameId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SymplFrameId" />
+                        <span asp-validation-for="SymplFrameId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SymplIntegrationId_OverrideForStore" asp-input="SymplIntegrationId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SymplIntegrationId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SymplIntegrationId" />
+                        <span asp-validation-for="SymplIntegrationId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="BankFrameId_OverrideForStore" asp-input="BankFrameId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="BankFrameId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="BankFrameId" />
+                        <span asp-validation-for="BankFrameId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="BankIntegrationId_OverrideForStore" asp-input="BankIntegrationId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="BankIntegrationId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="BankIntegrationId" />
+                        <span asp-validation-for="BankIntegrationId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

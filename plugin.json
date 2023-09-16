@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment methods",
+  "FriendlyName": "InstallmentService",
+  "SystemName": "Payments.InstallmentService",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "Bernasos",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.InstallmentService.dll",
+  "Description": "This plugin allows you to pay using Installment Service through Installment Service payment gateway."
+}
